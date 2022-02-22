@@ -4,6 +4,44 @@ import 'package:fluttertoast/fluttertoast.dart';
 class ButtonPage extends StatelessWidget {
   const ButtonPage({Key? key}) : super(key: key);
 
+  TextButton _buildTextButton(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        Fluttertoast.showToast(
+            msg: "按下了 TextButton",
+            backgroundColor: Theme.of(context).primaryColorDark);
+      },
+      child: const Text("TextButton"),
+    );
+  }
+
+  OutlinedButton _buildOutlinedButton(BuildContext context) {
+    return OutlinedButton(
+        onPressed: () {
+          Fluttertoast.showToast(
+              msg: "按下了 OutlinedButton",
+              backgroundColor: Theme.of(context).primaryColorDark);
+        },
+        child: const Text("OutlinedButton"),
+        style: OutlinedButton.styleFrom(
+          primary: Colors.red,
+          side: const BorderSide(width: 2, color: Colors.red),
+        ));
+  }
+
+  ElevatedButton _buildElevatedButton(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Fluttertoast.showToast(
+            msg: "按下了 ElevatedButton",
+            backgroundColor: Theme.of(context).primaryColorDark);
+      },
+      child: const Text("ElevatedButton"),
+      style:
+          ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.green)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,27 +50,9 @@ class ButtonPage extends StatelessWidget {
         width: double.maxFinite,
         child: Column(
           children: [
-            TextButton(
-                onPressed: () {
-                  Fluttertoast.showToast(
-                      msg: "按下了 TextButton",
-                      backgroundColor: Theme.of(context).primaryColorDark);
-                },
-                child: const Text("TextButton")),
-            OutlinedButton(
-                onPressed: () {
-                  Fluttertoast.showToast(
-                      msg: "按下了 OutlinedButton",
-                      backgroundColor: Theme.of(context).primaryColorDark);
-                },
-                child: const Text("OutlinedButton")),
-            ElevatedButton(
-                onPressed: () {
-                  Fluttertoast.showToast(
-                      msg: "按下了 ElevatedButton",
-                      backgroundColor: Theme.of(context).primaryColorDark);
-                },
-                child: const Text("ElevatedButton"))
+            _buildTextButton(context),
+            _buildOutlinedButton(context),
+            _buildElevatedButton(context)
           ],
         ),
       ),
