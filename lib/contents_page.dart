@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/constants.dart';
-import 'package:flutter_playground/navigation_routes.dart';
 
 class ContentsPage extends StatelessWidget {
   const ContentsPage({Key? key}) : super(key: key);
@@ -16,12 +15,13 @@ class ContentsPage extends StatelessWidget {
             return ListTile(
               title: Text(Constants.contentItems[index].title),
               onTap: () {
-                Navigator.of(context).pushNamed(NavigationRoutes.buttonPage);
+                Navigator.of(context)
+                    .pushNamed(Constants.contentItems[index].route);
               },
             );
           },
           separatorBuilder: (BuildContext context, int index) {
-            return const Divider(color: Colors.blue);
+            return const Divider(color: Colors.blue, height: 1);
           },
           itemCount: Constants.contentItems.length),
     );

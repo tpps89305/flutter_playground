@@ -5,6 +5,7 @@ class Constants {
   static List<ContentItem> get contentItems {
     List<ContentItem> list = [];
     list.add(ContentItem("按鈕", route: NavigationRoutes.buttonPage));
+    list.add(ContentItem("SnackBar", route: NavigationRoutes.snackPage));
     return list;
   }
 }
