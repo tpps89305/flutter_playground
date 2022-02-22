@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/button_page.dart';
 import 'package:flutter_playground/contents_page.dart';
 import 'package:flutter_playground/navigation_routes.dart';
+import 'package:flutter_playground/popup_menu_button_page.dart';
 import 'package:flutter_playground/snackbar_page.dart';
 
 void main() {
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
 
   final routes = <String, WidgetBuilder>{
     NavigationRoutes.buttonPage: ((context) => const ButtonPage()),
-    NavigationRoutes.snackPage: ((context) => const SnackbarPage())
+    NavigationRoutes.snackPage: ((context) => const SnackbarPage()),
+    NavigationRoutes.popupMenuButtonPage: ((context) => const PopupMenuButtonPage())
   };
 
   @override
