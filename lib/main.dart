@@ -4,6 +4,7 @@ import 'package:flutter_playground/contents_page.dart';
 import 'package:flutter_playground/dropdown_button_page.dart';
 import 'package:flutter_playground/navigation_routes.dart';
 import 'package:flutter_playground/popup_menu_button_page.dart';
+import 'package:flutter_playground/radio_list_page.dart';
 import 'package:flutter_playground/snackbar_page.dart';
 import 'package:flutter_playground/text_field_page.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         const PopupMenuButtonPage(),
     NavigationRoutes.dropdownButtonPage: (context) =>
         const DropdownButtonPage(),
-    NavigationRoutes.textFieldPage: (context) => const TextFieldPage()
+    NavigationRoutes.textFieldPage: (context) => const TextFieldPage(),
+    NavigationRoutes.radioListPage: ((context) => const RadioListPage())
   };
 
   @override
