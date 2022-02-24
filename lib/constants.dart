@@ -10,6 +10,7 @@ class Constants {
     list.add(ContentItem("下拉式選單", route: NavigationRoutes.dropdownButtonPage));
     list.add(ContentItem("文字輸入", route: NavigationRoutes.textFieldPage));
     list.add(ContentItem("選單", route: NavigationRoutes.radioListPage));
+    list.add(ContentItem("轉輪", route: NavigationRoutes.numberPickerPage));
     return list;
   }
 }

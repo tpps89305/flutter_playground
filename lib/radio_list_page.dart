@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widget/text_widget.dart';
+
 class RadioListPage extends StatelessWidget {
   const RadioListPage({Key? key}) : super(key: key);
 
@@ -8,7 +10,7 @@ class RadioListPage extends StatelessWidget {
     final locationRadioGroup =
         _RadioListPageFragment(GlobalKey<_RadioListPageFragmentState>());
 
-    final textResult = _TextWidget(GlobalKey<_TextWidgetState>());
+    final textResult = TextWidget(GlobalKey<TextWidgetState>());
 
     final buttonSubmit = ElevatedButton(
         onPressed: () {
@@ -82,35 +84,4 @@ class _RadioListPageFragmentState extends State<_RadioListPageFragment> {
   }
 
   getSelectedItem() => _locations[_groupValue];
-}
-
-class _TextWidget extends StatefulWidget {
-  final GlobalKey<_TextWidgetState> _key;
-
-  const _TextWidget(this._key) : super(key: _key);
-  @override
-  State<StatefulWidget> createState() => _TextWidgetState();
-
-  setText(String text) {
-    _key.currentState?.setText(text);
-  }
-}
-
-class _TextWidgetState extends State<_TextWidget> {
-  String _text = "";
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      _text,
-      style: const TextStyle(fontSize: 20),
-    );
-  }
-
-  setText(String text) {
-    setState(() {
-      _text = text;
-    });
-  }
-
-  setName(String name) {}
 }
