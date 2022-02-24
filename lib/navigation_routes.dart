@@ -6,4 +6,5 @@ class NavigationRoutes {
   static const String textFieldPage = "textField";
   static const String radioListPage = "radioList";
   static const String numberPickerPage = "numberPicker";
+  static const String checkboxesListPage = "checkboxesList";
 }

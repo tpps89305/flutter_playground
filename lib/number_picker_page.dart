@@ -88,7 +88,7 @@ class _GenderRadioGroupState extends State<_GenderRadioGroup> {
   @override
   Widget build(BuildContext context) {
     var radioItems = <RadioListTile>[];
-    for (var i = 0; i < _genders.length; i++) {
+    for (int i = 0; i < _genders.length; i++) {
       radioItems.add(RadioListTile(
           value: i,
           groupValue: _groupValue,
@@ -98,7 +98,7 @@ class _GenderRadioGroupState extends State<_GenderRadioGroup> {
           ),
           onChanged: (value) {
             setState(() {
-              _groupValue = value as int;
+              _groupValue = value;
             });
           }));
     }

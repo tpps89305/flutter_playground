@@ -11,6 +11,7 @@ class Constants {
     list.add(ContentItem("文字輸入", route: NavigationRoutes.textFieldPage));
     list.add(ContentItem("選單", route: NavigationRoutes.radioListPage));
     list.add(ContentItem("轉輪", route: NavigationRoutes.numberPickerPage));
+    list.add(ContentItem("複選清單", route: NavigationRoutes.checkboxesListPage));
     return list;
   }
 }
