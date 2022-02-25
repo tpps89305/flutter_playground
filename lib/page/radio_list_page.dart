@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widget/text_widget.dart';
+import '../widget/text_widget.dart';
 
 class RadioListPage extends StatelessWidget {
   const RadioListPage({Key? key}) : super(key: key);

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/button_page.dart';
-import 'package:flutter_playground/checkbox_list_page.dart';
-import 'package:flutter_playground/contents_page.dart';
-import 'package:flutter_playground/dropdown_button_page.dart';
-import 'package:flutter_playground/gallery_page.dart';
-import 'package:flutter_playground/image_browser_page.dart';
-import 'package:flutter_playground/navigation_routes.dart';
-import 'package:flutter_playground/number_picker_page.dart';
-import 'package:flutter_playground/popup_menu_button_page.dart';
-import 'package:flutter_playground/radio_list_page.dart';
-import 'package:flutter_playground/snackbar_page.dart';
-import 'package:flutter_playground/text_field_page.dart';
+import 'package:flutter_playground/page/button_page.dart';
+import 'package:flutter_playground/page/checkbox_list_page.dart';
+import 'package:flutter_playground/page/contents_page.dart';
+import 'package:flutter_playground/page/dropdown_button_page.dart';
+import 'package:flutter_playground/page/gallery_page.dart';
+import 'package:flutter_playground/page/image_browser_page.dart';
+import 'package:flutter_playground/constants/navigation_routes.dart';
+import 'package:flutter_playground/page/number_picker_page.dart';
+import 'package:flutter_playground/page/popup_menu_button_page.dart';
+import 'package:flutter_playground/page/radio_list_page.dart';
+import 'package:flutter_playground/page/snackbar_page.dart';
+import 'package:flutter_playground/page/text_field_page.dart';
 
 void main() {
   runApp(MyApp());

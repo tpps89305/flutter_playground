@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/constants.dart';
+
+import '../constants/constants.dart';
 
 class ContentsPage extends StatelessWidget {
   const ContentsPage({Key? key}) : super(key: key);

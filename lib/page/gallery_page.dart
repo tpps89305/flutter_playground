@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/constants.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
+
+import '../constants/constants.dart';
 
 class GalleryPage extends StatelessWidget {
   const GalleryPage({Key? key}) : super(key: key);

@@ -1,5 +1,6 @@
-import 'package:flutter_playground/content_item.dart';
-import 'package:flutter_playground/navigation_routes.dart';
+import 'package:flutter_playground/item/content_item.dart';
+
+import 'navigation_routes.dart';
 
 class Constants {
   static List<ContentItem> get contentItems {
