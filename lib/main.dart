@@ -3,6 +3,7 @@ import 'package:flutter_playground/button_page.dart';
 import 'package:flutter_playground/checkbox_list_page.dart';
 import 'package:flutter_playground/contents_page.dart';
 import 'package:flutter_playground/dropdown_button_page.dart';
+import 'package:flutter_playground/gallery_page.dart';
 import 'package:flutter_playground/image_browser_page.dart';
 import 'package:flutter_playground/navigation_routes.dart';
 import 'package:flutter_playground/number_picker_page.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.radioListPage: (context) => const RadioListPage(),
     NavigationRoutes.numberPickerPage: (context) => const NumberPickerPage(),
     NavigationRoutes.checkboxesListPage: (context) => const CheckboxListPage(),
-    NavigationRoutes.imageBrowserPage:(context) => ImageBrowserPage()
+    NavigationRoutes.imageBrowserPage:(context) => const ImageBrowserPage(),
+    NavigationRoutes.galleryPage:(context) => const GalleryPage()
   };
 
   @override

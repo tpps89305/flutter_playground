@@ -13,6 +13,13 @@ class Constants {
     list.add(ContentItem("轉輪", route: NavigationRoutes.numberPickerPage));
     list.add(ContentItem("複選清單", route: NavigationRoutes.checkboxesListPage));
     list.add(ContentItem("圖片瀏覽", route: NavigationRoutes.imageBrowserPage));
+    list.add(ContentItem("相簿", route: NavigationRoutes.galleryPage));
     return list;
   }
+
+  static const images = [
+    "assets/images/birds-on-tree.jpg",
+    "assets/images/moon.jpg",
+    "assets/images/building.jpg"
+  ];
 }

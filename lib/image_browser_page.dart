@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/constants.dart';
 
 class ImageBrowserPage extends StatelessWidget {
-  static const images = [
-    "assets/images/birds-on-tree.jpg",
-    "assets/images/moon.jpg",
-    "assets/images/building.jpg"
-  ];
 
-  ImageBrowserPage({Key? key}) : super(key: key);
+  const ImageBrowserPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var imageBrowser = _ImageBrowser(
-        globalKey: GlobalKey<_ImageBrowserState>(), images: images);
+        globalKey: GlobalKey<_ImageBrowserState>(), images: Constants.images);
     final buttonPrevious = IconButton(
         onPressed: () {
           imageBrowser.previousImage();
