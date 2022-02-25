@@ -9,4 +9,5 @@ class NavigationRoutes {
   static const String checkboxesListPage = "checkboxesList";
   static const String imageBrowserPage = "imageBrowser";
   static const String galleryPage = "gallery";
+  static const String imagePickerPage = "imagePicker";
 }

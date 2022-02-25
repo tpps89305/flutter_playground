@@ -15,6 +15,7 @@ class Constants {
     list.add(ContentItem("複選清單", route: NavigationRoutes.checkboxesListPage));
     list.add(ContentItem("圖片瀏覽", route: NavigationRoutes.imageBrowserPage));
     list.add(ContentItem("相簿", route: NavigationRoutes.galleryPage));
+    list.add(ContentItem("選取相片", route: NavigationRoutes.imagePickerPage));
     return list;
   }
 
