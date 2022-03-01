@@ -40,7 +40,7 @@ class TextFieldPage extends StatelessWidget {
 class _NameWidget extends StatefulWidget {
   final GlobalKey<_NameWidgetState> _key;
 
-  _NameWidget(this._key) : super(key: _key);
+  const _NameWidget(this._key) : super(key: _key);
 
   @override
   State<StatefulWidget> createState() => _NameWidgetState();
