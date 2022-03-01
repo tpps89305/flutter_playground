@@ -11,4 +11,5 @@ class NavigationRoutes {
   static const String galleryPage = "gallery";
   static const String imagePickerPage = "imagePicker";
   static const String gridViewPage = "gridView";
+  static const String animationTransformPage = "animationTransform";
 }
