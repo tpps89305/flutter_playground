@@ -19,6 +19,8 @@ class Constants {
     list.add(ContentItem("畫廊", route: NavigationRoutes.gridViewPage));
     list.add(
         ContentItem("旋轉動畫", route: NavigationRoutes.animationTransformPage));
+    list.add(
+        ContentItem("縮放動畫", route: NavigationRoutes.animationScaleMovePage));
     return list;
   }
 

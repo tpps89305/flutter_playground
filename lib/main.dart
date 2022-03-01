@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/page/animation_scale_move_page.dart';
 import 'package:flutter_playground/page/animation_transform_page.dart';
 import 'package:flutter_playground/page/button_page.dart';
 import 'package:flutter_playground/page/checkbox_list_page.dart';
@@ -37,7 +38,10 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.galleryPage: (context) => const GalleryPage(),
     NavigationRoutes.imagePickerPage: (context) => const ImagePickerPage(),
     NavigationRoutes.gridViewPage: (context) => const GridViewPage(),
-    NavigationRoutes.animationTransformPage: (context) => const AnimationTransformPage()
+    NavigationRoutes.animationTransformPage: (context) =>
+        const AnimationTransformPage(),
+    NavigationRoutes.animationScaleMovePage: (context) =>
+        const AnimationScaleMovePage()
   };
 
   @override

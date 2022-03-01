@@ -12,4 +12,5 @@ class NavigationRoutes {
   static const String imagePickerPage = "imagePicker";
   static const String gridViewPage = "gridView";
   static const String animationTransformPage = "animationTransform";
+  static const String animationScaleMovePage = "animationScaleMove";
 }
