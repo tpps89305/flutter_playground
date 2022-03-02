@@ -25,6 +25,9 @@ class Constants {
         ContentItem("動畫物件", route: NavigationRoutes.animatedContainerPage));
     list.add(ContentItem("起飛",
         route: NavigationRoutes.animatedContainerAligmentPage));
+    list.add(ContentItem("變透明", route: NavigationRoutes.animatedOpacityPage));
+    list.add(
+        ContentItem("淡入 / 淡出", route: NavigationRoutes.animatedCrossFadePage));
     return list;
   }
 

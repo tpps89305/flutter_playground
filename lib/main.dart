@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/page/animated_cross_fade_page.dart';
+import 'package:flutter_playground/page/animated_opacity_page.dart';
 import 'package:flutter_playground/page/animation_container_aligment_page.dart';
 import 'package:flutter_playground/page/animation_container_page.dart';
 import 'package:flutter_playground/page/animation_scale_move_page.dart';
@@ -47,7 +49,11 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.animatedContainerPage: (context) =>
         const AnimationContainerPage(),
     NavigationRoutes.animatedContainerAligmentPage: (context) =>
-        const AnimationContainerAligmentPage()
+        const AnimationContainerAligmentPage(),
+    NavigationRoutes.animatedOpacityPage: (context) =>
+        const AnimatedOpacityPage(),
+    NavigationRoutes.animatedCrossFadePage: (context) =>
+        const AnimatedCrossFadePage()
   };
 
   @override
