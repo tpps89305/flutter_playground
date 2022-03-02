@@ -20,6 +20,7 @@ import 'package:flutter_playground/page/popup_menu_button_page.dart';
 import 'package:flutter_playground/page/radio_list_page.dart';
 import 'package:flutter_playground/page/snackbar_page.dart';
 import 'package:flutter_playground/page/text_field_page.dart';
+import 'package:flutter_playground/page/transition_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
         const AnimatedOpacityPage(),
     NavigationRoutes.animatedCrossFadePage: (context) =>
         const AnimatedCrossFadePage(),
-    NavigationRoutes.animatedListPage: (context) => const AnimatedListPage()
+    NavigationRoutes.animatedListPage: (context) => const AnimatedListPage(),
+    NavigationRoutes.transitionPage: (context) => const TransitionPageOne()
   };
 
   @override

@@ -19,4 +19,5 @@ class NavigationRoutes {
   static const String animatedOpacityPage = "animatedOpacity";
   static const String animatedCrossFadePage = "animatedCrossFade";
   static const String animatedListPage = "animatedList";
+  static const String transitionPage = "transition";
 }
