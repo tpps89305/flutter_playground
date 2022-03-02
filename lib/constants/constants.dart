@@ -21,6 +21,10 @@ class Constants {
         ContentItem("旋轉動畫", route: NavigationRoutes.animationTransformPage));
     list.add(
         ContentItem("縮放動畫", route: NavigationRoutes.animationScaleMovePage));
+    list.add(
+        ContentItem("動畫物件", route: NavigationRoutes.animatedContainerPage));
+    list.add(ContentItem("起飛",
+        route: NavigationRoutes.animatedContainerAligmentPage));
     return list;
   }
 

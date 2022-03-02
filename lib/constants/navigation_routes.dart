@@ -13,4 +13,7 @@ class NavigationRoutes {
   static const String gridViewPage = "gridView";
   static const String animationTransformPage = "animationTransform";
   static const String animationScaleMovePage = "animationScaleMove";
+  static const String animatedContainerPage = "animatedContainerPage";
+  static const String animatedContainerAligmentPage =
+      "animatedContainerAligment";
 }

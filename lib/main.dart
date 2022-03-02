@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/page/animation_container_aligment_page.dart';
+import 'package:flutter_playground/page/animation_container_page.dart';
 import 'package:flutter_playground/page/animation_scale_move_page.dart';
 import 'package:flutter_playground/page/animation_transform_page.dart';
 import 'package:flutter_playground/page/button_page.dart';
@@ -41,7 +43,11 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.animationTransformPage: (context) =>
         const AnimationTransformPage(),
     NavigationRoutes.animationScaleMovePage: (context) =>
-        const AnimationScaleMovePage()
+        const AnimationScaleMovePage(),
+    NavigationRoutes.animatedContainerPage: (context) =>
+        const AnimationContainerPage(),
+    NavigationRoutes.animatedContainerAligmentPage: (context) =>
+        const AnimationContainerAligmentPage()
   };
 
   @override
