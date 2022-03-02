@@ -28,6 +28,7 @@ class Constants {
     list.add(ContentItem("變透明", route: NavigationRoutes.animatedOpacityPage));
     list.add(
         ContentItem("淡入 / 淡出", route: NavigationRoutes.animatedCrossFadePage));
+    list.add(ContentItem("清單動畫", route: NavigationRoutes.animatedListPage));
     return list;
   }
 
