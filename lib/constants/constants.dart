@@ -30,6 +30,7 @@ class Constants {
         ContentItem("淡入 / 淡出", route: NavigationRoutes.animatedCrossFadePage));
     list.add(ContentItem("清單動畫", route: NavigationRoutes.animatedListPage));
     list.add(ContentItem("轉場", route: NavigationRoutes.transitionPage));
+    list.add(ContentItem("對話方塊", route: NavigationRoutes.dialogPage));
     return list;
   }
 

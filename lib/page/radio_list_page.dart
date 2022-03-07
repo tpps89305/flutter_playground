@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widget/radio_list_page_fragment.dart';
 import '../widget/text_widget.dart';
 
 class RadioListPage extends StatelessWidget {
@@ -8,7 +9,7 @@ class RadioListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locationRadioGroup =
-        _RadioListPageFragment(GlobalKey<_RadioListPageFragmentState>());
+        RadioListPageFragment(GlobalKey<RadioListPageFragmentState>());
 
     final textResult = TextWidget(GlobalKey<TextWidgetState>());
 
@@ -40,48 +41,4 @@ class RadioListPage extends StatelessWidget {
       )),
     );
   }
-}
-
-class _RadioListPageFragment extends StatefulWidget {
-  final GlobalKey<_RadioListPageFragmentState> _key;
-
-  const _RadioListPageFragment(this._key) : super(key: _key);
-
-  @override
-  _RadioListPageFragmentState createState() => _RadioListPageFragmentState();
-
-  getSelectedItem() => _key.currentState?.getSelectedItem();
-}
-
-class _RadioListPageFragmentState extends State<_RadioListPageFragment> {
-  final _locations = ["倫敦", "東京", "臺北"];
-  var _groupValue = 0;
-  @override
-  Widget build(BuildContext context) {
-    var radioItems = <RadioListTile>[];
-
-    for (var i = 0; i < _locations.length; i++) {
-      radioItems.add(RadioListTile(
-          value: i,
-          groupValue: _groupValue,
-          title: Text(_locations[i],
-              style: const TextStyle(
-                fontSize: 20,
-              )),
-          onChanged: (value) {
-            setState(() {
-              _groupValue = value;
-            });
-          }));
-    }
-
-    final widget = Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: radioItems,
-    );
-
-    return widget;
-  }
-
-  getSelectedItem() => _locations[_groupValue];
 }
