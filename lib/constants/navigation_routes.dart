@@ -21,4 +21,5 @@ class NavigationRoutes {
   static const String animatedListPage = "animatedList";
   static const String transitionPage = "transition";
   static const String dialogPage = "dialog";
+  static const String appBarPage = "appBar";
 }

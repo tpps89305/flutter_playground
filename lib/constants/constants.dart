@@ -31,6 +31,7 @@ class Constants {
     list.add(ContentItem("清單動畫", route: NavigationRoutes.animatedListPage));
     list.add(ContentItem("轉場", route: NavigationRoutes.transitionPage));
     list.add(ContentItem("對話方塊", route: NavigationRoutes.dialogPage));
+    list.add(ContentItem("標題列", route: NavigationRoutes.appBarPage));
     return list;
   }
 

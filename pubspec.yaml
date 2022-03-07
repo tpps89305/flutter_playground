@@ -66,6 +66,7 @@ flutter:
     - assets/images/birds-on-tree.jpg
     - assets/images/moon.jpg
     - assets/images/building.jpg
+    - assets/images/bird.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

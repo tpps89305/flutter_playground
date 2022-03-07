@@ -6,6 +6,7 @@ import 'package:flutter_playground/page/animation_container_aligment_page.dart';
 import 'package:flutter_playground/page/animation_container_page.dart';
 import 'package:flutter_playground/page/animation_scale_move_page.dart';
 import 'package:flutter_playground/page/animation_transform_page.dart';
+import 'package:flutter_playground/page/app_bar_page.dart';
 import 'package:flutter_playground/page/button_page.dart';
 import 'package:flutter_playground/page/checkbox_list_page.dart';
 import 'package:flutter_playground/page/contents_page.dart';
@@ -59,7 +60,8 @@ class MyApp extends StatelessWidget {
         const AnimatedCrossFadePage(),
     NavigationRoutes.animatedListPage: (context) => const AnimatedListPage(),
     NavigationRoutes.transitionPage: (context) => const TransitionPageOne(),
-    NavigationRoutes.dialogPage:(context) => const DialogPage()
+    NavigationRoutes.dialogPage: (context) => const DialogPage(),
+    NavigationRoutes.appBarPage: (context) => const AppBarPage()
   };
 
   @override
