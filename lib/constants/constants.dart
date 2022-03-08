@@ -32,6 +32,7 @@ class Constants {
     list.add(ContentItem("轉場", route: NavigationRoutes.transitionPage));
     list.add(ContentItem("對話方塊", route: NavigationRoutes.dialogPage));
     list.add(ContentItem("標題列", route: NavigationRoutes.appBarPage));
+    list.add(ContentItem("標籤列", route: NavigationRoutes.tabBarPage));
     return list;
   }
 
