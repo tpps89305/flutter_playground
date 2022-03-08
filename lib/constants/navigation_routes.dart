@@ -23,4 +23,5 @@ class NavigationRoutes {
   static const String dialogPage = "dialog";
   static const String appBarPage = "appBar";
   static const String tabBarPage = "tabBar";
+  static const String bottomNavigationBarPage = "bottomNavigationBar";
 }

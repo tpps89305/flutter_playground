@@ -33,6 +33,8 @@ class Constants {
     list.add(ContentItem("對話方塊", route: NavigationRoutes.dialogPage));
     list.add(ContentItem("標題列", route: NavigationRoutes.appBarPage));
     list.add(ContentItem("標籤列", route: NavigationRoutes.tabBarPage));
+    list.add(
+        ContentItem("底部導覽列", route: NavigationRoutes.bottomNavigationBarPage));
     return list;
   }
 

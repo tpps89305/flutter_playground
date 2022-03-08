@@ -7,6 +7,7 @@ import 'package:flutter_playground/page/animation_container_page.dart';
 import 'package:flutter_playground/page/animation_scale_move_page.dart';
 import 'package:flutter_playground/page/animation_transform_page.dart';
 import 'package:flutter_playground/page/app_bar_page.dart';
+import 'package:flutter_playground/page/bottom_navigation_bar_page.dart';
 import 'package:flutter_playground/page/button_page.dart';
 import 'package:flutter_playground/page/checkbox_list_page.dart';
 import 'package:flutter_playground/page/contents_page.dart';
@@ -63,7 +64,9 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.transitionPage: (context) => const TransitionPageOne(),
     NavigationRoutes.dialogPage: (context) => const DialogPage(),
     NavigationRoutes.appBarPage: (context) => const AppBarPage(),
-    NavigationRoutes.tabBarPage: (context) => const TabBarPage()
+    NavigationRoutes.tabBarPage: (context) => const TabBarPage(),
+    NavigationRoutes.bottomNavigationBarPage: (context) =>
+        const BottomNavigationBarPage()
   };
 
   @override
