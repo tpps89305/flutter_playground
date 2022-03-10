@@ -1,7 +1,7 @@
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 class ChineseTranditionalAssetsPickerTextDelegate
-    extends AssetsPickerTextDelegate {
+    extends AssetPickerTextDelegate {
   /// Confirm string for the confirm button.
   @override
   String get confirm => '確認';

@@ -65,7 +65,8 @@ class _MultiImagePickerWrapperState extends State<_MultiImagePickerWrapper> {
   Future<void> selectImages() async {
     final List<AssetEntity>? assets = await AssetPicker.pickAssets(
       context,
-      textDelegate: ChineseTranditionalAssetsPickerTextDelegate(),
+      pickerConfig: AssetPickerConfig(
+          textDelegate: ChineseTranditionalAssetsPickerTextDelegate()),
     );
     setState(() {
       _assets = assets ?? [];
