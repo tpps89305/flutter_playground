@@ -35,6 +35,7 @@ class Constants {
     list.add(ContentItem("標籤列", route: NavigationRoutes.tabBarPage));
     list.add(
         ContentItem("底部導覽列", route: NavigationRoutes.bottomNavigationBarPage));
+    list.add(ContentItem("進階標籤頁", route: NavigationRoutes.advanceTabbarPage));
     return list;
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/page/advance_tabbar_page.dart';
 import 'package:flutter_playground/page/animated_cross_fade_page.dart';
 import 'package:flutter_playground/page/animated_list_page.dart';
 import 'package:flutter_playground/page/animated_opacity_page.dart';
@@ -66,7 +67,8 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.appBarPage: (context) => const AppBarPage(),
     NavigationRoutes.tabBarPage: (context) => const TabBarPage(),
     NavigationRoutes.bottomNavigationBarPage: (context) =>
-        const BottomNavigationBarPage()
+        const BottomNavigationBarPage(),
+    NavigationRoutes.advanceTabbarPage: (context) => const AdvanceTabbarPage(),
   };
 
   @override
