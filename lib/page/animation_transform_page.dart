@@ -33,12 +33,16 @@ class _AnimationWrapperState extends State<_AnimationWrapper>
   void initState() {
     super.initState();
 
-    _controller =
-        AnimationController(duration: const Duration(seconds: 3), vsync: this);
-    
-    final curvedAnim =
-        CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
-    
+    _controller = AnimationController(
+      duration: const Duration(seconds: 3),
+      vsync: this,
+    );
+
+    final curvedAnim = CurvedAnimation(
+      parent: _controller,
+      curve: Curves.fastOutSlowIn,
+    );
+
     // 用 .. 忽略不需要的回傳結果
     _animation = Tween(begin: 0.0, end: 2 * pi).animate(curvedAnim)
       ..addListener(() {

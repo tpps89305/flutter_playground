@@ -8,7 +8,9 @@ class SnackbarPage extends StatelessWidget {
     SnackBar _buildSnackBar() {
       return SnackBar(
         content: const Text("按下了按鈕"),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
         behavior: SnackBarBehavior.floating,
       );
     }

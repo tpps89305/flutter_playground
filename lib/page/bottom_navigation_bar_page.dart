@@ -39,8 +39,12 @@ class __BottomNaviBarState extends State<_BottomNaviBar> {
     final List<BottomNavigationBarItem> bottomNaviBarItems = [];
 
     for (int i = 0; i < widget.naviItemIcon.length; i++) {
-      bottomNaviBarItems.add(BottomNavigationBarItem(
-          icon: widget.naviItemIcon[i], label: widget.naviItemText[i]));
+      bottomNaviBarItems.add(
+        BottomNavigationBarItem(
+          icon: widget.naviItemIcon[i],
+          label: widget.naviItemText[i],
+        ),
+      );
     }
 
     return BottomNavigationBar(

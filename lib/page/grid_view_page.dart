@@ -13,17 +13,19 @@ class GridViewPage extends StatelessWidget {
         globalKey: GlobalKey<_MultiImagePickerWrapperState>());
 
     final _buttonPicker = TextButton(
-        onPressed: () {
-          wrapper.selectImages();
-        },
-        child: const Text("挑選相片"));
+      onPressed: () {
+        wrapper.selectImages();
+      },
+      child: const Text("挑選相片"),
+    );
 
     return Scaffold(
       appBar: AppBar(title: const Text("畫廊")),
       body: Center(
-          child: Column(
-        children: [_buttonPicker, wrapper],
-      )),
+        child: Column(
+          children: [_buttonPicker, wrapper],
+        ),
+      ),
     );
   }
 }
@@ -49,16 +51,23 @@ class _MultiImagePickerWrapperState extends State<_MultiImagePickerWrapper> {
     }
     return Expanded(
       child: GridView.count(
-          crossAxisCount: 2,
-          padding: const EdgeInsets.all(20.0),
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
-          physics: const BouncingScrollPhysics(),
-          children: List.generate(_assets.length, (index) {
+        crossAxisCount: 2,
+        padding: const EdgeInsets.all(20.0),
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 20,
+        physics: const BouncingScrollPhysics(),
+        children: List.generate(
+          _assets.length,
+          (index) {
             return Image(
-                image: AssetEntityImageProvider(_assets[index],
-                    isOriginal: false));
-          })),
+              image: AssetEntityImageProvider(
+                _assets[index],
+                isOriginal: false,
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 
@@ -66,7 +75,8 @@ class _MultiImagePickerWrapperState extends State<_MultiImagePickerWrapper> {
     final List<AssetEntity>? assets = await AssetPicker.pickAssets(
       context,
       pickerConfig: AssetPickerConfig(
-          textDelegate: ChineseTranditionalAssetsPickerTextDelegate()),
+        textDelegate: ChineseTranditionalAssetsPickerTextDelegate(),
+      ),
     );
     setState(() {
       _assets = assets ?? [];

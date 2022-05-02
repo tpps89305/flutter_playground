@@ -13,36 +13,46 @@ class NumberPickerPage extends StatelessWidget {
     final _textWidget = TextWidget(GlobalKey<TextWidgetState>());
 
     final _agePicker = _AgePicker(
-        globalKey: GlobalKey<_AgePickerState>(),
-        minValue: 0,
-        maxValue: 150,
-        currentValue: 18);
+      globalKey: GlobalKey<_AgePickerState>(),
+      minValue: 0,
+      maxValue: 150,
+      currentValue: 18,
+    );
 
     final _buttonSubmit = ElevatedButton(
-        onPressed: () {
-          _textWidget.setText(marrySuggestion(
-              _genderRadioGroup.getSelectedItem(),
-              _agePicker.getCurrentValue()));
-        },
-        child: const Text("確認"));
+      onPressed: () {
+        _textWidget.setText(
+          marrySuggestion(
+            _genderRadioGroup.getSelectedItem(),
+            _agePicker.getCurrentValue(),
+          ),
+        );
+      },
+      child: const Text("確認"),
+    );
 
     return Scaffold(
       appBar: AppBar(title: const Text("轉輪")),
       body: Center(
-        child: Column(children: [
-          Container(
+        child: Column(
+          children: [
+            Container(
               padding: const EdgeInsets.symmetric(vertical: 8),
-              child: const Text("性別：")),
-          Container(
+              child: const Text("性別："),
+            ),
+            Container(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
-              child: _genderRadioGroup),
-          Container(
+              child: _genderRadioGroup,
+            ),
+            Container(
               padding: const EdgeInsets.symmetric(vertical: 8),
-              child: const Text("年齡：")),
-          _agePicker,
-          _buttonSubmit,
-          _textWidget
-        ]),
+              child: const Text("年齡："),
+            ),
+            _agePicker,
+            _buttonSubmit,
+            _textWidget
+          ],
+        ),
       ),
     );
   }
@@ -89,7 +99,8 @@ class _GenderRadioGroupState extends State<_GenderRadioGroup> {
   Widget build(BuildContext context) {
     var radioItems = <RadioListTile>[];
     for (int i = 0; i < _genders.length; i++) {
-      radioItems.add(RadioListTile(
+      radioItems.add(
+        RadioListTile(
           value: i,
           groupValue: _groupValue,
           title: Text(
@@ -100,7 +111,9 @@ class _GenderRadioGroupState extends State<_GenderRadioGroup> {
             setState(() {
               _groupValue = value;
             });
-          }));
+          },
+        ),
+      );
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -117,12 +130,12 @@ class _AgePicker extends StatefulWidget {
   var maxValue = 100;
   var currentValue = 0;
 
-  _AgePicker(
-      {required this.globalKey,
-      required this.minValue,
-      required this.maxValue,
-      required this.currentValue})
-      : super(key: globalKey);
+  _AgePicker({
+    required this.globalKey,
+    required this.minValue,
+    required this.maxValue,
+    required this.currentValue,
+  }) : super(key: globalKey);
 
   @override
   _AgePickerState createState() => _AgePickerState();

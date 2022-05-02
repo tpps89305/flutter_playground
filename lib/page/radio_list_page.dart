@@ -14,31 +14,33 @@ class RadioListPage extends StatelessWidget {
     final textResult = TextWidget(GlobalKey<TextWidgetState>());
 
     final buttonSubmit = ElevatedButton(
-        onPressed: () {
-          textResult.setText(locationRadioGroup.getSelectedItem());
-        },
-        child: const Text("確定"));
+      onPressed: () {
+        textResult.setText(locationRadioGroup.getSelectedItem());
+      },
+      child: const Text("確定"),
+    );
 
     return Scaffold(
       appBar: AppBar(title: const Text("選單")),
       body: Center(
-          child: Column(
-        children: [
-          Container(
-            child: locationRadioGroup,
-            width: 200,
-            margin: const EdgeInsets.symmetric(vertical: 10),
-          ),
-          Container(
-            child: buttonSubmit,
-            margin: const EdgeInsets.symmetric(vertical: 10),
-          ),
-          Container(
-            child: textResult,
-            margin: const EdgeInsets.symmetric(vertical: 10),
-          )
-        ],
-      )),
+        child: Column(
+          children: [
+            Container(
+              child: locationRadioGroup,
+              width: 200,
+              margin: const EdgeInsets.symmetric(vertical: 10),
+            ),
+            Container(
+              child: buttonSubmit,
+              margin: const EdgeInsets.symmetric(vertical: 10),
+            ),
+            Container(
+              child: textResult,
+              margin: const EdgeInsets.symmetric(vertical: 10),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

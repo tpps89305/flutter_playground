@@ -41,7 +41,7 @@ class AppBarPage extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.only(),
         children: [
-          UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountName: Text("Dispy"),
             accountEmail: Text("tpps89305@hotmail.com"),
             currentAccountPicture: CircleAvatar(
@@ -86,10 +86,11 @@ class AppBarPage extends StatelessWidget {
       drawer: drawer,
       body: Center(
         child: ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text("返回")),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text("返回"),
+        ),
       ),
     );
   }

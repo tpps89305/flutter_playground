@@ -14,12 +14,14 @@ class RadioListPageFragment extends StatefulWidget {
 class RadioListPageFragmentState extends State<RadioListPageFragment> {
   final _locations = ["倫敦", "東京", "臺北"];
   var _groupValue = 0;
+
   @override
   Widget build(BuildContext context) {
     var radioItems = <RadioListTile>[];
 
     for (var i = 0; i < _locations.length; i++) {
-      radioItems.add(RadioListTile(
+      radioItems.add(
+        RadioListTile(
           value: i,
           groupValue: _groupValue,
           title: Text(_locations[i],
@@ -30,7 +32,9 @@ class RadioListPageFragmentState extends State<RadioListPageFragment> {
             setState(() {
               _groupValue = value;
             });
-          }));
+          },
+        ),
+      );
     }
 
     final widget = Column(

@@ -12,19 +12,20 @@ class ContentsPage extends StatelessWidget {
         title: const Text("Contents"),
       ),
       body: ListView.separated(
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(Constants.contentItems[index].title),
-              onTap: () {
-                Navigator.of(context)
-                    .pushNamed(Constants.contentItems[index].route);
-              },
-            );
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return const Divider(color: Colors.blue, height: 1);
-          },
-          itemCount: Constants.contentItems.length),
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text(Constants.contentItems[index].title),
+            onTap: () {
+              Navigator.of(context)
+                  .pushNamed(Constants.contentItems[index].route);
+            },
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const Divider(color: Colors.blue, height: 1);
+        },
+        itemCount: Constants.contentItems.length,
+      ),
     );
   }
 }

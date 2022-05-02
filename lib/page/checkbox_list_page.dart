@@ -22,36 +22,40 @@ class CheckboxListPage extends StatelessWidget {
       "寫作"
     ];
     final hobbyCheckboxes = _CheckboxList(
-        globalKey: GlobalKey<_CheckboxListState>(), items: hobbies);
+      globalKey: GlobalKey<_CheckboxListState>(),
+      items: hobbies,
+    );
 
     final buttonSubmit = ElevatedButton(
-        onPressed: () {
-          List<bool> hobbiesStatues = hobbyCheckboxes.getItemStatus();
-          String hobbiesDesc = "";
-          for (int i = 0; i < hobbiesStatues.length; i++) {
-            if (hobbiesStatues[i]) {
-              hobbiesDesc += "#${hobbies[i]} ";
-            }
+      onPressed: () {
+        List<bool> hobbiesStatues = hobbyCheckboxes.getItemStatus();
+        String hobbiesDesc = "";
+        for (int i = 0; i < hobbiesStatues.length; i++) {
+          if (hobbiesStatues[i]) {
+            hobbiesDesc += "#${hobbies[i]} ";
           }
-          _textWidget.setText(hobbiesDesc);
-        },
-        child: const Text("確認"));
+        }
+        _textWidget.setText(hobbiesDesc);
+      },
+      child: const Text("確認"),
+    );
 
     return Scaffold(
       appBar: AppBar(title: const Text("複選清單")),
       body: Center(
-          child: SingleChildScrollView(
-        child: Column(
-          children: [
-            hobbyCheckboxes,
-            buttonSubmit,
-            Container(
-              child: _textWidget,
-              padding: const EdgeInsets.all(8),
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              hobbyCheckboxes,
+              buttonSubmit,
+              Container(
+                child: _textWidget,
+                padding: const EdgeInsets.all(8),
+              )
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }
@@ -80,7 +84,8 @@ class _CheckboxListState extends State<_CheckboxList> {
   Widget build(BuildContext context) {
     List<CheckboxListTile> checkboxes = [];
     for (var i = 0; i < widget._itemStatus.length; i++) {
-      checkboxes.add(CheckboxListTile(
+      checkboxes.add(
+        CheckboxListTile(
           value: widget._itemStatus[i],
           title: Text(widget.items[i]),
           controlAffinity: ListTileControlAffinity.leading,
@@ -88,7 +93,9 @@ class _CheckboxListState extends State<_CheckboxList> {
             setState(() {
               widget._itemStatus[i] = newValue!;
             });
-          }));
+          },
+        ),
+      );
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,

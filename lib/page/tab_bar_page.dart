@@ -19,16 +19,18 @@ class TabBarPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("標籤列"),
-          bottom: const TabBar(tabs: [
-            Tab(
-              icon: Icon(Icons.directions_bike),
-              text: "Bike",
-            ),
-            Tab(
-              icon: Icon(Icons.directions_car),
-              text: "Car",
-            )
-          ]),
+          bottom: const TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.directions_bike),
+                text: "Bike",
+              ),
+              Tab(
+                icon: Icon(Icons.directions_car),
+                text: "Car",
+              )
+            ],
+          ),
         ),
         body: tabBarView,
       ),

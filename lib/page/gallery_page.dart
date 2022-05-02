@@ -10,13 +10,14 @@ class GalleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _gallery = _GalleryWrapper(
-        globalKey: GlobalKey<_GalleryWrapperState>(),
-        images: Constants.images,
-        backgroundDecoration: const BoxDecoration(color: Colors.black),
-        initialIndex: 0,
-        minScale: 0.1,
-        maxScale: 2,
-        scrollDirection: Axis.horizontal);
+      globalKey: GlobalKey<_GalleryWrapperState>(),
+      images: Constants.images,
+      backgroundDecoration: const BoxDecoration(color: Colors.black),
+      initialIndex: 0,
+      minScale: 0.1,
+      maxScale: 2,
+      scrollDirection: Axis.horizontal,
+    );
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -36,15 +37,15 @@ class _GalleryWrapper extends StatefulWidget {
   Axis scrollDirection;
   int? imageIndex;
 
-  _GalleryWrapper(
-      {required this.globalKey,
-      required this.images,
-      required this.backgroundDecoration,
-      required this.initialIndex,
-      required this.minScale,
-      required this.maxScale,
-      required this.scrollDirection})
-      : super(key: globalKey) {
+  _GalleryWrapper({
+    required this.globalKey,
+    required this.images,
+    required this.backgroundDecoration,
+    required this.initialIndex,
+    required this.minScale,
+    required this.maxScale,
+    required this.scrollDirection,
+  }) : super(key: globalKey) {
     imageIndex = initialIndex;
   }
 
@@ -55,10 +56,11 @@ class _GalleryWrapper extends StatefulWidget {
 class _GalleryWrapperState extends State<_GalleryWrapper> {
   PhotoViewGalleryPageOptions _buildItem(BuildContext context, int index) {
     return PhotoViewGalleryPageOptions(
-        imageProvider: AssetImage(widget.images[index]),
-        initialScale: PhotoViewComputedScale.contained,
-        minScale: widget.minScale,
-        maxScale: widget.maxScale);
+      imageProvider: AssetImage(widget.images[index]),
+      initialScale: PhotoViewComputedScale.contained,
+      minScale: widget.minScale,
+      maxScale: widget.maxScale,
+    );
   }
 
   void _onPageChange(int index) {

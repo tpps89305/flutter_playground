@@ -29,6 +29,7 @@ class AnimatedOpacityPage extends StatelessWidget {
 class _AnimationWrapper extends StatefulWidget {
   final GlobalKey<_AnimationWrapperState> globalKey;
   double opacity;
+
   _AnimationWrapper({required this.globalKey, required this.opacity})
       : super(key: globalKey);
 

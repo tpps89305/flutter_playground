@@ -29,6 +29,7 @@ class AnimationContainerPage extends StatelessWidget {
 class _AnimationWrapper extends StatefulWidget {
   final GlobalKey<_AnimationWrapperState> globalKey;
   double barHeight;
+  
   _AnimationWrapper({required this.globalKey, required this.barHeight})
       : super(key: globalKey);
 

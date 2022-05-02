@@ -12,30 +12,33 @@ class ImagePickerPage extends StatelessWidget {
         _ImagePickerWrapper(globalKey: GlobalKey<_ImagePickerWrapperState>());
 
     final _buttonCameraImage = TextButton(
-        onPressed: () {
-          _imagePickerWrapper.getImage(ImageSource.camera);
-        },
-        child: const Text("相機拍照"));
+      onPressed: () {
+        _imagePickerWrapper.getImage(ImageSource.camera);
+      },
+      child: const Text("相機拍照"),
+    );
 
     final _buttonGalleryImage = TextButton(
-        onPressed: () {
-          _imagePickerWrapper.getImage(ImageSource.gallery);
-        },
-        child: const Text("挑選相簿照片"));
+      onPressed: () {
+        _imagePickerWrapper.getImage(ImageSource.gallery);
+      },
+      child: const Text("挑選相簿照片"),
+    );
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("挑選相片"),
       ),
       body: Center(
-          child: Column(
-        children: [
-          _buttonCameraImage,
-          _buttonGalleryImage,
-          _imagePickerWrapper
-        ],
-        mainAxisAlignment: MainAxisAlignment.start,
-      )),
+        child: Column(
+          children: [
+            _buttonCameraImage,
+            _buttonGalleryImage,
+            _imagePickerWrapper
+          ],
+          mainAxisAlignment: MainAxisAlignment.start,
+        ),
+      ),
     );
   }
 }

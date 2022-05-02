@@ -6,7 +6,9 @@ class AnimatedCrossFadePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final animationWrapper = _AnimationWrapper(
-        globalKey: GlobalKey<_AnimationWrapperState>(), showFirst: true);
+      globalKey: GlobalKey<_AnimationWrapperState>(),
+      showFirst: true,
+    );
 
     ElevatedButton button = ElevatedButton(
       onPressed: () {
@@ -14,11 +16,12 @@ class AnimatedCrossFadePage extends StatelessWidget {
       },
       child: const Text("關閉廣告"),
       style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20)),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      ),
     );
 
     return Scaffold(
-      appBar: AppBar(title: const Text("淡入 / 淡山")),
+      appBar: AppBar(title: const Text("淡入 / 淡出")),
       body: Center(
         child: Column(
           children: [animationWrapper, button],
@@ -32,6 +35,7 @@ class AnimatedCrossFadePage extends StatelessWidget {
 class _AnimationWrapper extends StatefulWidget {
   final GlobalKey<_AnimationWrapperState> globalKey;
   bool showFirst;
+
   _AnimationWrapper({required this.globalKey, required this.showFirst})
       : super(key: globalKey);
 
@@ -47,21 +51,22 @@ class _AnimationWrapperState extends State<_AnimationWrapper> {
   @override
   Widget build(BuildContext context) {
     return AnimatedCrossFade(
-        firstChild: Container(
-          child: const Text("關閉廣告"),
-          width: 100,
-          height: 100,
-          alignment: Alignment.center,
-        ),
-        secondChild: Container(
-          child: Icon(Icons.mood),
-          width: 100,
-          height: 100,
-        ),
-        crossFadeState: widget.showFirst
-            ? CrossFadeState.showFirst
-            : CrossFadeState.showSecond,
-        duration: const Duration(seconds: 1));
+      firstChild: Container(
+        child: const Text("關閉廣告"),
+        width: 100,
+        height: 100,
+        alignment: Alignment.center,
+      ),
+      secondChild: const SizedBox(
+        child: Icon(Icons.mood),
+        width: 100,
+        height: 100,
+      ),
+      crossFadeState: widget.showFirst
+          ? CrossFadeState.showFirst
+          : CrossFadeState.showSecond,
+      duration: const Duration(seconds: 1),
+    );
   }
 
   changeState() {

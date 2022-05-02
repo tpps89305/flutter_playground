@@ -19,20 +19,22 @@ class TextFieldPage extends StatelessWidget {
       },
     );
     final _button = ElevatedButton(
-        onPressed: () {
-          _nameWidget.setName(controller.text);
-        },
-        child: const Text("確認"));
+      onPressed: () {
+        _nameWidget.setName(controller.text);
+      },
+      child: const Text("確認"),
+    );
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("文字輸入"),
       ),
       body: Container(
-          padding: const EdgeInsets.all(8),
-          child: Column(
-            children: [textField, _button, _nameWidget],
-          )),
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          children: [textField, _button, _nameWidget],
+        ),
+      ),
     );
   }
 }
@@ -55,7 +57,10 @@ class _NameWidgetState extends State<_NameWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Hi, $_name!", style: const TextStyle(fontSize: 20));
+    return Text(
+      "Hi, $_name!",
+      style: const TextStyle(fontSize: 20),
+    );
   }
 
   setName(String name) {

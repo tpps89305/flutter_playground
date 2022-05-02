@@ -15,15 +15,17 @@ class TransitionPageOne extends StatelessWidget {
       return Stack(
         children: [
           SlideTransition(
-              position: Tween(
-                      begin: const Offset(0.0, 0.0),
-                      end: const Offset(-1.0, 0.0))
-                  .animate(animation1),
-              child: this),
+            position: Tween(
+              begin: const Offset(0.0, 0.0),
+              end: const Offset(-1.0, 0.0),
+            ).animate(animation1),
+            child: this,
+          ),
           SlideTransition(
-              position: Tween(begin: const Offset(1.0, 0.0), end: Offset.zero)
-                  .animate(animation1),
-              child: newPage),
+            position: Tween(begin: const Offset(1.0, 0.0), end: Offset.zero)
+                .animate(animation1),
+            child: newPage,
+          ),
         ],
       );
     }
@@ -34,16 +36,19 @@ class TransitionPageOne extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  PageRouteBuilder(
-                      transitionsBuilder: transitionsToNextPage,
-                      transitionDuration: const Duration(milliseconds: 500),
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          newPage));
-            },
-            child: const Text("下一頁")),
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageRouteBuilder(
+                transitionsBuilder: transitionsToNextPage,
+                transitionDuration: const Duration(milliseconds: 500),
+                pageBuilder: (context, animation, secondaryAnimation) =>
+                    newPage,
+              ),
+            );
+          },
+          child: const Text("下一頁"),
+        ),
       ),
     );
   }

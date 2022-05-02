@@ -20,7 +20,7 @@ class AnimationContainerAligmentPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text("起飛")),
-      body: Container(
+      body: SizedBox(
         width: double.maxFinite,
         child: Column(
           children: [
