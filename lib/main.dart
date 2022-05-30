@@ -19,6 +19,7 @@ import 'package:flutter_playground/page/grid_view_page.dart';
 import 'package:flutter_playground/page/image_browser_page.dart';
 import 'package:flutter_playground/constants/navigation_routes.dart';
 import 'package:flutter_playground/page/image_picker_page.dart';
+import 'package:flutter_playground/page/loading_animation_page.dart';
 import 'package:flutter_playground/page/number_picker_page.dart';
 import 'package:flutter_playground/page/popup_menu_button_page.dart';
 import 'package:flutter_playground/page/radio_list_page.dart';
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.bottomNavigationBarPage: (context) =>
         const BottomNavigationBarPage(),
     NavigationRoutes.advanceTabbarPage: (context) => const AdvanceTabbarPage(),
+    NavigationRoutes.loadingAnimation: (context) => LoadingAnimationPage(),
   };
 
   @override

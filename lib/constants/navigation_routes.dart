@@ -25,4 +25,5 @@ class NavigationRoutes {
   static const String tabBarPage = "tabBar";
   static const String bottomNavigationBarPage = "bottomNavigationBar";
   static const String advanceTabbarPage = "advanceTabbar";
+  static const String loadingAnimation = "loadingAnimation";
 }
