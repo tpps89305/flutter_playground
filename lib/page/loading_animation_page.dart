@@ -1,62 +1,77 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 class LoadingAnimationPage extends StatelessWidget {
-  LoadingAnimationPage({Key? key}) : super(key: key);
+  const LoadingAnimationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(title: const Text("讀取動畫")),
-      body: Center(
-        child: FadeLoaderWidget(),
+      body: const Center(
+        child: FadeLoaderWidget(
+          timeOfSecond: 2,
+          widgetSize: 36,
+          dotSize: 6,
+        ),
       ),
     );
   }
 }
 
 class FadeLoaderWidget extends StatelessWidget {
-  final fadeLoaderKey1 = GlobalKey<FadeLoaderState>();
-  final fadeLoaderKey2 = GlobalKey<FadeLoaderState>();
-  final fadeLoaderKey3 = GlobalKey<FadeLoaderState>();
-  final fadeLoaderKey4 = GlobalKey<FadeLoaderState>();
-  final fadeLoaderKey5 = GlobalKey<FadeLoaderState>();
+  final double widgetSize;
+  final double dotSize;
+  final int timeOfSecond;
 
-  Timer? _timer;
-  int timeFlag = 0;
-
-  FadeLoaderWidget({Key? key}) : super(key: key);
+  const FadeLoaderWidget({
+    this.widgetSize = 100,
+    this.timeOfSecond = 2,
+    this.dotSize = 10,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final array = [
-      fadeLoaderKey1,
-      fadeLoaderKey2,
-      fadeLoaderKey3,
-      fadeLoaderKey4,
-      fadeLoaderKey5,
-    ];
+    final globalKeyArray = [];
+    for (var i = 0; i < 12; i++) {
+      globalKeyArray.add(GlobalKey<FadeLoaderState>());
+    }
+
+    Timer? _timer;
+    int timeFlag = 0;
+    var circel = timeOfSecond * 1000 / 12;
     _timer ??= Timer.periodic(
-      const Duration(milliseconds: 200),
+      Duration(milliseconds: circel.toInt()),
       (timer) {
-        array[timeFlag].currentState?.forward();
+        globalKeyArray[timeFlag].currentState?.forward();
         timeFlag++;
-        if (timeFlag >= array.length) {
+        if (timeFlag >= globalKeyArray.length) {
           timeFlag = 0;
         }
       },
     );
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        FadeLoader(fadeLoaderKey1),
-        FadeLoader(fadeLoaderKey2),
-        FadeLoader(fadeLoaderKey3),
-        FadeLoader(fadeLoaderKey4),
-        FadeLoader(fadeLoaderKey5),
-      ],
+    return SizedBox.fromSize(
+      size: Size.square(widgetSize),
+      child: Stack(
+        children: List.generate(12, (index) {
+          return Transform.rotate(
+            angle: 30 * index * (pi / 180),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: FadeLoader(
+                globalKeyArray[index],
+                fadeTime: timeOfSecond,
+                size: dotSize,
+              ),
+            ),
+          );
+        }),
+      ),
     );
   }
 }
@@ -64,11 +79,15 @@ class FadeLoaderWidget extends StatelessWidget {
 class FadeLoader extends StatefulWidget {
   // ignore: unused_field
   final GlobalKey<FadeLoaderState> _globalKey;
-  double initValue;
+  final double initValue;
+  final int fadeTime;
+  final double size;
 
-  FadeLoader(
+  const FadeLoader(
     this._globalKey, {
     this.initValue = 1,
+    this.fadeTime = 2,
+    this.size = 10,
   }) : super(key: _globalKey);
 
   @override
@@ -87,7 +106,7 @@ class FadeLoaderState extends State<FadeLoader>
     _controller = AnimationController(
       value: widget.initValue,
       vsync: this,
-      duration: const Duration(seconds: 1),
+      duration: Duration(seconds: widget.fadeTime),
     );
 
     _animation = Tween<double>(begin: 1, end: 0).animate(_controller)
@@ -109,9 +128,12 @@ class FadeLoaderState extends State<FadeLoader>
     return FadeTransition(
       opacity: _animation,
       child: Container(
-        height: 20,
-        width: 20,
-        color: Colors.amber,
+        height: widget.size,
+        width: widget.size,
+        decoration: const BoxDecoration(
+          color: Colors.amber,
+          shape: BoxShape.circle,
+        ),
       ),
     );
   }
