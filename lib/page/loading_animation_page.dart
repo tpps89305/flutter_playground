@@ -12,25 +12,21 @@ class LoadingAnimationPage extends StatelessWidget {
       backgroundColor: Colors.grey,
       appBar: AppBar(title: const Text("讀取動畫")),
       body: const Center(
-        child: FadeLoaderWidget(
-          timeOfSecond: 2,
-          widgetSize: 36,
-          dotSize: 6,
-        ),
+        child: LoadingIndicator(),
       ),
     );
   }
 }
 
-class FadeLoaderWidget extends StatelessWidget {
+class LoadingIndicator extends StatelessWidget {
   final double widgetSize;
   final double dotSize;
-  final int timeOfSecond;
+  final int timeOfMilliseconds;
 
-  const FadeLoaderWidget({
-    this.widgetSize = 100,
-    this.timeOfSecond = 2,
-    this.dotSize = 10,
+  const LoadingIndicator({
+    this.widgetSize = 36,
+    this.timeOfMilliseconds = 1200,
+    this.dotSize = 5,
     Key? key,
   }) : super(key: key);
 
@@ -38,12 +34,12 @@ class FadeLoaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final globalKeyArray = [];
     for (var i = 0; i < 12; i++) {
-      globalKeyArray.add(GlobalKey<FadeLoaderState>());
+      globalKeyArray.add(GlobalKey<FadeDotState>());
     }
 
     Timer? _timer;
     int timeFlag = 0;
-    var circel = timeOfSecond * 1000 / 12;
+    var circel = timeOfMilliseconds / 12;
     _timer ??= Timer.periodic(
       Duration(milliseconds: circel.toInt()),
       (timer) {
@@ -63,9 +59,9 @@ class FadeLoaderWidget extends StatelessWidget {
             angle: 30 * index * (pi / 180),
             child: Align(
               alignment: Alignment.topCenter,
-              child: FadeLoader(
+              child: FadeDot(
                 globalKeyArray[index],
-                fadeTime: timeOfSecond,
+                fadeTimeOfMilliseconds: timeOfMilliseconds,
                 size: dotSize,
               ),
             ),
@@ -76,25 +72,25 @@ class FadeLoaderWidget extends StatelessWidget {
   }
 }
 
-class FadeLoader extends StatefulWidget {
+class FadeDot extends StatefulWidget {
   // ignore: unused_field
-  final GlobalKey<FadeLoaderState> _globalKey;
+  final GlobalKey<FadeDotState> _globalKey;
   final double initValue;
-  final int fadeTime;
+  final int fadeTimeOfMilliseconds;
   final double size;
 
-  const FadeLoader(
+  const FadeDot(
     this._globalKey, {
     this.initValue = 1,
-    this.fadeTime = 2,
+    this.fadeTimeOfMilliseconds = 2,
     this.size = 10,
   }) : super(key: _globalKey);
 
   @override
-  State<StatefulWidget> createState() => FadeLoaderState();
+  State<StatefulWidget> createState() => FadeDotState();
 }
 
-class FadeLoaderState extends State<FadeLoader>
+class FadeDotState extends State<FadeDot>
     with SingleTickerProviderStateMixin {
   late Animation<double> _animation;
   late AnimationController _controller;
@@ -106,7 +102,7 @@ class FadeLoaderState extends State<FadeLoader>
     _controller = AnimationController(
       value: widget.initValue,
       vsync: this,
-      duration: Duration(seconds: widget.fadeTime),
+      duration: Duration(milliseconds: widget.fadeTimeOfMilliseconds),
     );
 
     _animation = Tween<double>(begin: 1, end: 0).animate(_controller)
