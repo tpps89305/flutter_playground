@@ -6,25 +6,38 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/page/snackbar_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_playground/main.dart';
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Check Snackbar Page', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
-
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    await tester.pumpWidget(
+      const TestApp(
+        widgetInstanceToTest: SnackbarPage(),
+      ),
+    );
+    final finderTextButton = find.text("SnackBox");
+    await tester.tap(finderTextButton);
+    await tester.pumpAndSettle();
+    
+    // 預期能看到「按下了按鈕」Snackbar
+    final finderToast = find.text("按下了按鈕");
+    expect(finderToast, findsOneWidget);
   });
+}
+
+class TestApp extends StatelessWidget {
+  const TestApp({
+    Key? key,
+    required this.widgetInstanceToTest,
+  }) : super(key: key);
+
+  final Widget widgetInstanceToTest;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: widgetInstanceToTest,
+    );
+  }
 }
