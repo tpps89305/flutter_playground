@@ -16,7 +16,6 @@ class Constants {
     list.add(ContentItem("圖片瀏覽", route: NavigationRoutes.imageBrowserPage));
     list.add(ContentItem("相簿", route: NavigationRoutes.galleryPage));
     list.add(ContentItem("選取相片", route: NavigationRoutes.imagePickerPage));
-    list.add(ContentItem("畫廊", route: NavigationRoutes.gridViewPage));
     list.add(
         ContentItem("旋轉動畫", route: NavigationRoutes.animationTransformPage));
     list.add(

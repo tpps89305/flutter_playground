@@ -15,7 +15,6 @@ import 'package:flutter_playground/page/contents_page.dart';
 import 'package:flutter_playground/page/dialog_page.dart';
 import 'package:flutter_playground/page/dropdown_button_page.dart';
 import 'package:flutter_playground/page/gallery_page.dart';
-import 'package:flutter_playground/page/grid_view_page.dart';
 import 'package:flutter_playground/page/image_browser_page.dart';
 import 'package:flutter_playground/constants/navigation_routes.dart';
 import 'package:flutter_playground/page/image_picker_page.dart';
@@ -49,7 +48,6 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.imageBrowserPage: (context) => const ImageBrowserPage(),
     NavigationRoutes.galleryPage: (context) => const GalleryPage(),
     NavigationRoutes.imagePickerPage: (context) => const ImagePickerPage(),
-    NavigationRoutes.gridViewPage: (context) => const GridViewPage(),
     NavigationRoutes.animationTransformPage: (context) =>
         const AnimationTransformPage(),
     NavigationRoutes.animationScaleMovePage: (context) =>
