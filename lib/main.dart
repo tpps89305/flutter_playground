@@ -70,7 +70,8 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.bottomNavigationBarPage: (context) =>
         const BottomNavigationBarPage(),
     NavigationRoutes.advanceTabbarPage: (context) => const AdvanceTabbarPage(),
-    NavigationRoutes.loadingAnimation: (context) => const LoadingAnimationPage(),
+    NavigationRoutes.loadingAnimation: (context) =>
+        const LoadingAnimationPage(),
   };
 
   @override
