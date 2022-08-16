@@ -28,20 +28,22 @@ class ImageBrowserPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("圖片瀏覽"),
       ),
-      body: Center(
+      body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              child: imageBrowser,
-              margin: const EdgeInsets.symmetric(vertical: 10),
+            Expanded(
+              child: Padding(
+                child: imageBrowser,
+                padding: const EdgeInsets.symmetric(vertical: 10),
+              ),
             ),
-            Container(
+            Padding(
               child: Row(
                 children: [buttonPrevious, buttonNext],
                 mainAxisAlignment: MainAxisAlignment.center,
               ),
-              margin: const EdgeInsets.symmetric(vertical: 10),
+              padding: const EdgeInsets.symmetric(vertical: 10),
             )
           ],
         ),
@@ -52,10 +54,9 @@ class ImageBrowserPage extends StatelessWidget {
 
 class _ImageBrowser extends StatefulWidget {
   final GlobalKey<_ImageBrowserState> globalKey;
-  List<String> images;
-  int _imageIndex = 0;
+  final List<String> images;
 
-  _ImageBrowser({required this.globalKey, required this.images})
+  const _ImageBrowser({required this.globalKey, required this.images})
       : super(key: globalKey);
 
   @override
@@ -66,23 +67,24 @@ class _ImageBrowser extends StatefulWidget {
 }
 
 class _ImageBrowserState extends State<_ImageBrowser> {
+  int _imageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Image.asset(widget.images[widget._imageIndex]);
+    return Image.asset(widget.images[_imageIndex]);
   }
 
   previousImage() {
     // 如果到達未端，就從另一端開始計數。
     setState(() {
-      widget._imageIndex = widget._imageIndex == 0
-          ? widget.images.length - 1
-          : widget._imageIndex - 1;
+      _imageIndex =
+          _imageIndex == 0 ? widget.images.length - 1 : _imageIndex - 1;
     });
   }
 
   nextImage() {
     setState(() {
-      widget._imageIndex = ++widget._imageIndex % widget.images.length;
+      _imageIndex = ++_imageIndex % widget.images.length;
     });
   }
 }
