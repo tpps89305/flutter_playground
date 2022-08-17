@@ -44,4 +44,10 @@ class Constants {
     "assets/images/moon.jpg",
     "assets/images/building.jpg"
   ];
+
+  static const imagesUrl = [
+    "https://dispydemo.blob.core.windows.net/newcontainer/birds-on-tree.jpg",
+    "https://dispydemo.blob.core.windows.net/newcontainer/building.jpg",
+    "https://dispydemo.blob.core.windows.net/newcontainer/moon.jpg"
+  ];
 }

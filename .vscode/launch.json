@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "flutter_playground html",
+            "request": "launch",
+            "type": "dart",
+            "args": ["--web-renderer","html"]
+        },
+        {
             "name": "flutter_playground",
             "request": "launch",
             "type": "dart"

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/constants/transparent_image.dart';
 
 import '../constants/constants.dart';
 
@@ -9,7 +10,7 @@ class ImageBrowserPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var imageBrowser = _ImageBrowser(
       globalKey: GlobalKey<_ImageBrowserState>(),
-      images: Constants.images,
+      images: Constants.imagesUrl,
     );
     final buttonPrevious = IconButton(
       onPressed: () {
@@ -71,7 +72,18 @@ class _ImageBrowserState extends State<_ImageBrowser> {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(widget.images[_imageIndex]);
+    return Stack(
+      children: [
+        const Center(child: CircularProgressIndicator()),
+        FadeInImage.memoryNetwork(
+          height: double.maxFinite,
+          width: double.maxFinite,
+          placeholder: kTransparentImage,
+          image: widget.images[_imageIndex],
+          fit: BoxFit.cover,
+        ),
+      ],
+    );
   }
 
   previousImage() {
