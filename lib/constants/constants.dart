@@ -36,6 +36,7 @@ class Constants {
         ContentItem("底部導覽列", route: NavigationRoutes.bottomNavigationBarPage));
     list.add(ContentItem("進階標籤頁", route: NavigationRoutes.advanceTabbarPage));
     list.add(ContentItem("讀取動畫", route: NavigationRoutes.loadingAnimation));
+    list.add(ContentItem("網路", route: NavigationRoutes.network));
     return list;
   }
 
