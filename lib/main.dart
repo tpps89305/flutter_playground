@@ -8,6 +8,7 @@ import 'package:flutter_playground/page/animation_container_page.dart';
 import 'package:flutter_playground/page/animation_scale_move_page.dart';
 import 'package:flutter_playground/page/animation_transform_page.dart';
 import 'package:flutter_playground/page/app_bar_page.dart';
+import 'package:flutter_playground/page/base64_to_image_page.dart';
 import 'package:flutter_playground/page/bottom_navigation_bar_page.dart';
 import 'package:flutter_playground/page/button_page.dart';
 import 'package:flutter_playground/page/checkbox_list_page.dart';
@@ -72,6 +73,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.loadingAnimation: (context) =>
         const LoadingAnimationPage(),
     NavigationRoutes.network: (context) => NetworkPage(),
+    NavigationRoutes.base64ToImage: (context) => Base64ToImagePage(),
   };
 
   @override

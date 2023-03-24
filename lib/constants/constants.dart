@@ -37,6 +37,7 @@ class Constants {
     list.add(ContentItem("進階標籤頁", route: NavigationRoutes.advanceTabbarPage));
     list.add(ContentItem("讀取動畫", route: NavigationRoutes.loadingAnimation));
     list.add(ContentItem("網路", route: NavigationRoutes.network));
+    list.add(ContentItem("圖片解碼", route: NavigationRoutes.base64ToImage));
     return list;
   }
 
@@ -51,4 +52,7 @@ class Constants {
     "https://dispydemo.blob.core.windows.net/newcontainer/building.jpg",
     "https://dispydemo.blob.core.windows.net/newcontainer/moon.jpg"
   ];
+
+  static const base64Image =
+      "iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/AQMAAABtkYKcAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKBJREFUKJF10LENhDAMBdAvpaDLBJFYw11WygSBCXJjsUakLAAdRRSf0VHBP1ev+v42VM+Qow68USHzLvAEbUjPooUjpL9whcOS4e8VD1ifVu5iD9j0jN88oB/V43QrQSuY1wmZAMsZvLRBYLEdk2NwI1YvPRFcTY6tMlxX7PYZAru9LhuFfawmqZljXiMSR/fXmW9YckcMILA+WmLwb3wByDT/uHCZx9IAAAAASUVORK5CYII=";
 }

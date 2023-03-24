@@ -26,4 +26,5 @@ class NavigationRoutes {
   static const String advanceTabbarPage = "advanceTabbar";
   static const String loadingAnimation = "loadingAnimation";
   static const String network = "network";
+  static const String base64ToImage = "base64ToImage";
 }
