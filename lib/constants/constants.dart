@@ -38,6 +38,7 @@ class Constants {
     list.add(ContentItem("讀取動畫", route: NavigationRoutes.loadingAnimation));
     list.add(ContentItem("網路", route: NavigationRoutes.network));
     list.add(ContentItem("圖片解碼", route: NavigationRoutes.base64ToImage));
+    list.add(ContentItem("圖片在清單的呈現", route: NavigationRoutes.imageFitWidth));
     return list;
   }
 

@@ -18,6 +18,7 @@ import 'package:flutter_playground/page/dropdown_button_page.dart';
 import 'package:flutter_playground/page/gallery_page.dart';
 import 'package:flutter_playground/page/image_browser_page.dart';
 import 'package:flutter_playground/constants/navigation_routes.dart';
+import 'package:flutter_playground/page/image_fit_width_page.dart';
 import 'package:flutter_playground/page/image_picker_page.dart';
 import 'package:flutter_playground/page/loading_animation_page.dart';
 import 'package:flutter_playground/page/network_page.dart';
@@ -74,6 +75,7 @@ class MyApp extends StatelessWidget {
         const LoadingAnimationPage(),
     NavigationRoutes.network: (context) => NetworkPage(),
     NavigationRoutes.base64ToImage: (context) => Base64ToImagePage(),
+    NavigationRoutes.imageFitWidth: (context) => ImageFitWidthPage(),
   };
 
   @override

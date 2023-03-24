@@ -27,4 +27,5 @@ class NavigationRoutes {
   static const String loadingAnimation = "loadingAnimation";
   static const String network = "network";
   static const String base64ToImage = "base64ToImage";
+  static const String imageFitWidth = 'imageFotWidth';
 }
