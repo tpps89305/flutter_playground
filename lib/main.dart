@@ -25,7 +25,6 @@ import 'package:flutter_playground/page/network_page.dart';
 import 'package:flutter_playground/page/number_picker_page.dart';
 import 'package:flutter_playground/page/popup_menu_button_page.dart';
 import 'package:flutter_playground/page/radio_list_page.dart';
-import 'package:flutter_playground/page/snackbar_page.dart';
 import 'package:flutter_playground/page/tab_bar_page.dart';
 import 'package:flutter_playground/page/text_field_page.dart';
 import 'package:flutter_playground/page/transition_page.dart';
@@ -39,7 +38,6 @@ class MyApp extends StatelessWidget {
 
   final routes = <String, WidgetBuilder>{
     NavigationRoutes.buttonPage: (context) => const ButtonPage(),
-    NavigationRoutes.snackPage: (context) => const SnackbarPage(),
     NavigationRoutes.popupMenuButtonPage: (context) =>
         const PopupMenuButtonPage(),
     NavigationRoutes.dropdownButtonPage: (context) =>

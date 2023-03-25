@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class ButtonPage extends StatelessWidget {
   const ButtonPage({Key? key}) : super(key: key);
 
+  SnackBar _buildSnackBar(String message) {
+    return SnackBar(
+      content: Text(message),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      behavior: SnackBarBehavior.floating,
+    );
+  }
+
   TextButton _buildTextButton(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Fluttertoast.showToast(
-          msg: "按下了 TextButton",
-          backgroundColor: Theme.of(context).primaryColorDark,
-        );
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(_buildSnackBar("按下了 TextButton"));
       },
       child: const Text("TextButton"),
     );
@@ -19,10 +27,9 @@ class ButtonPage extends StatelessWidget {
   OutlinedButton _buildOutlinedButton(BuildContext context) {
     return OutlinedButton(
       onPressed: () {
-        Fluttertoast.showToast(
-          msg: "按下了 OutlinedButton",
-          backgroundColor: Theme.of(context).primaryColorDark,
-        );
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(_buildSnackBar("按下了 OutlinedButton"));
       },
       child: const Text("OutlinedButton"),
       style: OutlinedButton.styleFrom(
@@ -35,10 +42,9 @@ class ButtonPage extends StatelessWidget {
   ElevatedButton _buildElevatedButton(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        Fluttertoast.showToast(
-          msg: "按下了 ElevatedButton",
-          backgroundColor: Theme.of(context).primaryColorDark,
-        );
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(_buildSnackBar("按下了 ElevatedButton"));
       },
       child: const Text("ElevatedButton"),
       style: ButtonStyle(
@@ -50,10 +56,9 @@ class ButtonPage extends StatelessWidget {
   IconButton _buildIconButton(BuildContext context) {
     return IconButton(
       onPressed: () {
-        Fluttertoast.showToast(
-          msg: "按下了 IconButton",
-          backgroundColor: Theme.of(context).primaryColorDark,
-        );
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(_buildSnackBar("按下了 IconButton"));
       },
       icon: const Icon(Icons.add),
     );
@@ -63,10 +68,9 @@ class ButtonPage extends StatelessWidget {
     return FloatingActionButton(
       child: const Icon(Icons.save),
       onPressed: () {
-        Fluttertoast.showToast(
-          msg: "按下了 FloatingActionButton",
-          backgroundColor: Theme.of(context).primaryColorDark,
-        );
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(_buildSnackBar("按下了 FloatingActionButton"));
       },
     );
   }
@@ -74,10 +78,9 @@ class ButtonPage extends StatelessWidget {
   ElevatedButton _buildElevatedButtonWithIcon(BuildContext context) {
     return ElevatedButton.icon(
       onPressed: () {
-        Fluttertoast.showToast(
-          msg: "按下了 ElevatedButtonWithIcon",
-          backgroundColor: Theme.of(context).primaryColorDark,
-        );
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(_buildSnackBar("按下了 ElevatedButtonWithIcon"));
       },
       icon: const Icon(Icons.access_alarm),
       label: const Text("With Icon"),
