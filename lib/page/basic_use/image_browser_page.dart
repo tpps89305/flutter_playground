@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/constants/constants.dart';
 import 'package:flutter_playground/constants/transparent_image.dart';
-
-import '../constants/constants.dart';
 
 class ImageBrowserPage extends StatelessWidget {
   const ImageBrowserPage({Key? key}) : super(key: key);

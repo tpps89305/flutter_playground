@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../widget/radio_list_page_fragment.dart';
-import '../widget/text_widget.dart';
+import 'package:flutter_playground/widget/radio_list_page_fragment.dart';
+import 'package:flutter_playground/widget/text_widget.dart';
 
 class RadioListPage extends StatelessWidget {
   const RadioListPage({Key? key}) : super(key: key);

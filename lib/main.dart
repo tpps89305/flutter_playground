@@ -1,33 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/page/advance_tabbar_page.dart';
-import 'package:flutter_playground/page/animated_cross_fade_page.dart';
-import 'package:flutter_playground/page/animated_list_page.dart';
-import 'package:flutter_playground/page/animated_opacity_page.dart';
-import 'package:flutter_playground/page/animation_container_aligment_page.dart';
-import 'package:flutter_playground/page/animation_container_page.dart';
-import 'package:flutter_playground/page/animation_scale_move_page.dart';
-import 'package:flutter_playground/page/animation_transform_page.dart';
-import 'package:flutter_playground/page/app_bar_page.dart';
-import 'package:flutter_playground/page/base64_to_image_page.dart';
-import 'package:flutter_playground/page/bottom_navigation_bar_page.dart';
-import 'package:flutter_playground/page/button_page.dart';
-import 'package:flutter_playground/page/checkbox_list_page.dart';
-import 'package:flutter_playground/page/contents_page.dart';
-import 'package:flutter_playground/page/dialog_page.dart';
-import 'package:flutter_playground/page/dropdown_button_page.dart';
-import 'package:flutter_playground/page/gallery_page.dart';
-import 'package:flutter_playground/page/image_browser_page.dart';
+import 'package:flutter_playground/catalogue_page.dart';
+import 'package:flutter_playground/constants/catalogue_routes.dart';
+import 'package:flutter_playground/page/basic_use/advance_tabbar_page.dart';
+import 'package:flutter_playground/page/basic_use/animated_cross_fade_page.dart';
+import 'package:flutter_playground/page/basic_use/animated_list_page.dart';
+import 'package:flutter_playground/page/basic_use/animated_opacity_page.dart';
+import 'package:flutter_playground/page/basic_use/animation_container_aligment_page.dart';
+import 'package:flutter_playground/page/basic_use/animation_container_page.dart';
+import 'package:flutter_playground/page/basic_use/animation_scale_move_page.dart';
+import 'package:flutter_playground/page/basic_use/animation_transform_page.dart';
+import 'package:flutter_playground/page/basic_use/app_bar_page.dart';
+import 'package:flutter_playground/page/basic_use/base64_to_image_page.dart';
+import 'package:flutter_playground/page/basic_use/basic_use_page.dart';
 import 'package:flutter_playground/constants/navigation_routes.dart';
-import 'package:flutter_playground/page/image_fit_width_page.dart';
-import 'package:flutter_playground/page/image_picker_page.dart';
-import 'package:flutter_playground/page/loading_animation_page.dart';
-import 'package:flutter_playground/page/network_page.dart';
-import 'package:flutter_playground/page/number_picker_page.dart';
-import 'package:flutter_playground/page/popup_menu_button_page.dart';
-import 'package:flutter_playground/page/radio_list_page.dart';
-import 'package:flutter_playground/page/tab_bar_page.dart';
-import 'package:flutter_playground/page/text_field_page.dart';
-import 'package:flutter_playground/page/transition_page.dart';
+import 'package:flutter_playground/page/basic_use/bottom_navigation_bar_page.dart';
+import 'package:flutter_playground/page/basic_use/button_page.dart';
+import 'package:flutter_playground/page/basic_use/checkbox_list_page.dart';
+import 'package:flutter_playground/page/basic_use/dialog_page.dart';
+import 'package:flutter_playground/page/basic_use/dropdown_button_page.dart';
+import 'package:flutter_playground/page/useful_package/gallery_page.dart';
+import 'package:flutter_playground/page/basic_use/image_browser_page.dart';
+import 'package:flutter_playground/page/basic_use/image_fit_width_page.dart';
+import 'package:flutter_playground/page/useful_package/image_picker_page.dart';
+import 'package:flutter_playground/page/basic_use/loading_animation_page.dart';
+import 'package:flutter_playground/page/basic_use/network_page.dart';
+import 'package:flutter_playground/page/useful_package/number_picker_page.dart';
+import 'package:flutter_playground/page/basic_use/popup_menu_button_page.dart';
+import 'package:flutter_playground/page/basic_use/radio_list_page.dart';
+import 'package:flutter_playground/page/basic_use/tab_bar_page.dart';
+import 'package:flutter_playground/page/basic_use/text_field_page.dart';
+import 'package:flutter_playground/page/basic_use/transition_page.dart';
+import 'package:flutter_playground/page/useful_package/useful_package_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,6 +40,8 @@ class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
   final routes = <String, WidgetBuilder>{
+    CatalogueRoutes.basicUse: (context) => const BasicUsePage(),
+    CatalogueRoutes.usefulPackage: (context) => UsefulPackagePage(),
     NavigationRoutes.buttonPage: (context) => const ButtonPage(),
     NavigationRoutes.popupMenuButtonPage: (context) =>
         const PopupMenuButtonPage(),
@@ -71,9 +76,9 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.advanceTabbarPage: (context) => const AdvanceTabbarPage(),
     NavigationRoutes.loadingAnimation: (context) =>
         const LoadingAnimationPage(),
-    NavigationRoutes.network: (context) => NetworkPage(),
-    NavigationRoutes.base64ToImage: (context) => Base64ToImagePage(),
-    NavigationRoutes.imageFitWidth: (context) => ImageFitWidthPage(),
+    NavigationRoutes.network: (context) => const NetworkPage(),
+    NavigationRoutes.base64ToImage: (context) => const Base64ToImagePage(),
+    NavigationRoutes.imageFitWidth: (context) => const ImageFitWidthPage(),
   };
 
   @override
@@ -83,7 +88,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ContentsPage(),
+      home: const CataloguePage(),
       routes: routes,
     );
   }

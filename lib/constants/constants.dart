@@ -3,18 +3,15 @@ import 'package:flutter_playground/item/content_item.dart';
 import 'navigation_routes.dart';
 
 class Constants {
-  static List<ContentItem> get contentItems {
+  static List<ContentItem> get basicUseItems {
     List<ContentItem> list = [];
     list.add(ContentItem("按鈕、SnackBar", route: NavigationRoutes.buttonPage));
     list.add(ContentItem("選單按鈕", route: NavigationRoutes.popupMenuButtonPage));
     list.add(ContentItem("下拉式選單", route: NavigationRoutes.dropdownButtonPage));
     list.add(ContentItem("文字輸入", route: NavigationRoutes.textFieldPage));
     list.add(ContentItem("選單", route: NavigationRoutes.radioListPage));
-    list.add(ContentItem("轉輪", route: NavigationRoutes.numberPickerPage));
     list.add(ContentItem("複選清單", route: NavigationRoutes.checkboxesListPage));
     list.add(ContentItem("圖片瀏覽", route: NavigationRoutes.imageBrowserPage));
-    list.add(ContentItem("相簿", route: NavigationRoutes.galleryPage));
-    list.add(ContentItem("選取相片", route: NavigationRoutes.imagePickerPage));
     list.add(
         ContentItem("旋轉動畫", route: NavigationRoutes.animationTransformPage));
     list.add(
@@ -38,6 +35,15 @@ class Constants {
     list.add(ContentItem("網路", route: NavigationRoutes.network));
     list.add(ContentItem("圖片解碼", route: NavigationRoutes.base64ToImage));
     list.add(ContentItem("圖片在清單的呈現", route: NavigationRoutes.imageFitWidth));
+    return list;
+  }
+
+  static List<ContentItem> get usefulPackageItems {
+    List<ContentItem> list = [
+      ContentItem("轉輪", route: NavigationRoutes.numberPickerPage),
+      ContentItem("相簿", route: NavigationRoutes.galleryPage),
+      ContentItem("選取相片", route: NavigationRoutes.imagePickerPage)
+    ];
     return list;
   }
 

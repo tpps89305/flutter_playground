@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/page/snackbar_page.dart';
+import 'package:flutter_playground/page/basic_use/button_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -14,15 +14,15 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(
       const TestApp(
-        widgetInstanceToTest: SnackbarPage(),
+        widgetInstanceToTest: ButtonPage(),
       ),
     );
-    final finderTextButton = find.text("SnackBox");
+    final finderTextButton = find.text("TextButton");
     await tester.tap(finderTextButton);
     await tester.pumpAndSettle();
     
     // 預期能看到「按下了按鈕」Snackbar
-    final finderToast = find.text("按下了按鈕");
+    final finderToast = find.text("按下了 TextButton");
     expect(finderToast, findsOneWidget);
   });
 }
