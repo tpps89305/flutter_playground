@@ -24,6 +24,7 @@ import 'package:flutter_playground/page/basic_use/image_fit_width_page.dart';
 import 'package:flutter_playground/page/useful_package/image_picker_page.dart';
 import 'package:flutter_playground/page/basic_use/loading_animation_page.dart';
 import 'package:flutter_playground/page/basic_use/network_page.dart';
+import 'package:flutter_playground/page/useful_package/mobile_scanner_page.dart';
 import 'package:flutter_playground/page/useful_package/number_picker_page.dart';
 import 'package:flutter_playground/page/basic_use/popup_menu_button_page.dart';
 import 'package:flutter_playground/page/basic_use/radio_list_page.dart';
@@ -79,6 +80,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.network: (context) => const NetworkPage(),
     NavigationRoutes.base64ToImage: (context) => const Base64ToImagePage(),
     NavigationRoutes.imageFitWidth: (context) => const ImageFitWidthPage(),
+    NavigationRoutes.mobileScanner:(context) => const MobileScannerPage(),
   };
 
   @override
