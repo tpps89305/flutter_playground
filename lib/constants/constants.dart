@@ -35,6 +35,7 @@ class Constants {
     list.add(ContentItem("網路", route: NavigationRoutes.network));
     list.add(ContentItem("圖片解碼", route: NavigationRoutes.base64ToImage));
     list.add(ContentItem("圖片在清單的呈現", route: NavigationRoutes.imageFitWidth));
+    list.add(ContentItem("電量（原生程式碼通訊）", route: NavigationRoutes.batteryLevel));
     return list;
   }
 
