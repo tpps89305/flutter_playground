@@ -28,4 +28,5 @@ class NavigationRoutes {
   static const String base64ToImage = "base64ToImage";
   static const String imageFitWidth = 'imageFotWidth';
   static const String batteryLevel = 'batteryLevel';
+  static const String customBorder = 'customBorder';
 }

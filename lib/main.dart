@@ -17,6 +17,7 @@ import 'package:flutter_playground/page/basic_use/battery_level_page.dart';
 import 'package:flutter_playground/page/basic_use/bottom_navigation_bar_page.dart';
 import 'package:flutter_playground/page/basic_use/button_page.dart';
 import 'package:flutter_playground/page/basic_use/checkbox_list_page.dart';
+import 'package:flutter_playground/page/basic_use/custom_border_page.dart';
 import 'package:flutter_playground/page/basic_use/dialog_page.dart';
 import 'package:flutter_playground/page/basic_use/dropdown_button_page.dart';
 import 'package:flutter_playground/page/useful_package/gallery_page.dart';
@@ -81,6 +82,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.base64ToImage: (context) => const Base64ToImagePage(),
     NavigationRoutes.imageFitWidth: (context) => const ImageFitWidthPage(),
     NavigationRoutes.batteryLevel: (context) => const BatteryLevelPage(),
+    NavigationRoutes.customBorder: (context) => const CustomBorderPage(),
   };
 
   @override
