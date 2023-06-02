@@ -20,6 +20,7 @@ import 'package:flutter_playground/page/basic_use/checkbox_list_page.dart';
 import 'package:flutter_playground/page/basic_use/custom_border_page.dart';
 import 'package:flutter_playground/page/basic_use/dialog_page.dart';
 import 'package:flutter_playground/page/basic_use/dropdown_button_page.dart';
+import 'package:flutter_playground/page/basic_use/font_weight_demo.dart';
 import 'package:flutter_playground/page/useful_package/gallery_page.dart';
 import 'package:flutter_playground/page/basic_use/image_browser_page.dart';
 import 'package:flutter_playground/page/basic_use/image_fit_width_page.dart';
@@ -83,6 +84,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.imageFitWidth: (context) => const ImageFitWidthPage(),
     NavigationRoutes.batteryLevel: (context) => const BatteryLevelPage(),
     NavigationRoutes.customBorder: (context) => const CustomBorderPage(),
+    NavigationRoutes.fontWeight: (context) => const FontWeightDemo(),
   };
 
   @override

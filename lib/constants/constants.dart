@@ -37,6 +37,7 @@ class Constants {
     list.add(ContentItem("圖片在清單的呈現", route: NavigationRoutes.imageFitWidth));
     list.add(ContentItem("電量（原生程式碼通訊）", route: NavigationRoutes.batteryLevel));
     list.add(ContentItem("描準框", route: NavigationRoutes.customBorder));
+    list.add(ContentItem("字型 Weight", route: NavigationRoutes.fontWeight));
     return list;
   }
 
