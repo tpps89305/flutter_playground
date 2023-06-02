@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   app_links: ^3.2.0
   http: ^0.13.5
+  widget_mask: ^1.0.0+0
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,7 @@ flutter:
     - assets/images/moon.jpg
     - assets/images/building.jpg
     - assets/images/bird.jpg
+    - assets/images/img_scanner_border.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
