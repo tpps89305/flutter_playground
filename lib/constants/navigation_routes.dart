@@ -29,4 +29,5 @@ class NavigationRoutes {
   static const String imageFitWidth = 'imageFotWidth';
   static const String batteryLevel = 'batteryLevel';
   static const String customBorder = 'customBorder';
+  static const String staggeredGridView = 'staggeredGridView';
 }

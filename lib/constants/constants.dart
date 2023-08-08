@@ -44,7 +44,8 @@ class Constants {
     List<ContentItem> list = [
       ContentItem("轉輪", route: NavigationRoutes.numberPickerPage),
       ContentItem("相簿", route: NavigationRoutes.galleryPage),
-      ContentItem("選取相片", route: NavigationRoutes.imagePickerPage)
+      ContentItem("選取相片", route: NavigationRoutes.imagePickerPage),
+      ContentItem("複合格狀清單", route: NavigationRoutes.staggeredGridView),
     ];
     return list;
   }

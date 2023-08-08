@@ -32,6 +32,7 @@ import 'package:flutter_playground/page/basic_use/radio_list_page.dart';
 import 'package:flutter_playground/page/basic_use/tab_bar_page.dart';
 import 'package:flutter_playground/page/basic_use/text_field_page.dart';
 import 'package:flutter_playground/page/basic_use/transition_page.dart';
+import 'package:flutter_playground/page/useful_package/staggered_grid_view_page.dart';
 import 'package:flutter_playground/page/useful_package/useful_package_page.dart';
 
 void main() {
@@ -83,6 +84,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.imageFitWidth: (context) => const ImageFitWidthPage(),
     NavigationRoutes.batteryLevel: (context) => const BatteryLevelPage(),
     NavigationRoutes.customBorder: (context) => const CustomBorderPage(),
+    NavigationRoutes.staggeredGridView:(context) => const StaggeredGridViewPage(),
   };
 
   @override
