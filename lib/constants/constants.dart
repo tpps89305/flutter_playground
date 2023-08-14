@@ -47,6 +47,7 @@ class Constants {
       ContentItem("相簿", route: NavigationRoutes.galleryPage),
       ContentItem("選取相片", route: NavigationRoutes.imagePickerPage),
       ContentItem("複合格狀清單", route: NavigationRoutes.staggeredGridView),
+      ContentItem("條碼掃描", route: NavigationRoutes.mobileScanner),
     ];
     return list;
   }

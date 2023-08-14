@@ -31,4 +31,5 @@ class NavigationRoutes {
   static const String customBorder = 'customBorder';
   static const String staggeredGridView = 'staggeredGridView';
   static const String fontWeight = 'fontWeight';
+  static const String mobileScanner = 'mobileScanner';
 }
