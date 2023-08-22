@@ -52,6 +52,13 @@ class Constants {
     return list;
   }
 
+  static List<ContentItem> get advanceUseItems {
+    List<ContentItem> list = [
+      ContentItem("多執行緒", route: NavigationRoutes.computeDemo),
+    ];
+    return list;
+  }
+
   static const images = [
     "assets/images/birds-on-tree.jpg",
     "assets/images/moon.jpg",

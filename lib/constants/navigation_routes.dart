@@ -32,4 +32,5 @@ class NavigationRoutes {
   static const String staggeredGridView = 'staggeredGridView';
   static const String fontWeight = 'fontWeight';
   static const String mobileScanner = 'mobileScanner';
+  static const String computeDemo = 'computeDemo';
 }
