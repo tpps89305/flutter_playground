@@ -1,5 +1,5 @@
 name: flutter_playground
-description: A new Flutter project.
+description: A demo project which to learn common scene of Flutter.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,7 +40,7 @@ dependencies:
   app_links: ^3.2.0
   flutter_staggered_grid_view: ^0.7.0
   widget_mask: ^1.0.0+0
-  http: ^1.1.0
+  http: ^0.13.6
   mobile_scanner: ^3.4.1
 
 dev_dependencies:

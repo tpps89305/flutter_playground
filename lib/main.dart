@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/catalogue_page.dart';
 import 'package:flutter_playground/constants/catalogue_routes.dart';
+import 'package:flutter_playground/page/advance_use/advance_use_page.dart';
+import 'package:flutter_playground/page/advance_use/compute_demo_page.dart';
 import 'package:flutter_playground/page/basic_use/advance_tabbar_page.dart';
 import 'package:flutter_playground/page/basic_use/animated_cross_fade_page.dart';
 import 'package:flutter_playground/page/basic_use/animated_list_page.dart';
@@ -48,6 +50,7 @@ class MyApp extends StatelessWidget {
   final routes = <String, WidgetBuilder>{
     CatalogueRoutes.basicUse: (context) => const BasicUsePage(),
     CatalogueRoutes.usefulPackage: (context) => UsefulPackagePage(),
+    CatalogueRoutes.advanceUse: (context) => AdvanceUsePage(),
     NavigationRoutes.buttonPage: (context) => const ButtonPage(),
     NavigationRoutes.popupMenuButtonPage: (context) =>
         const PopupMenuButtonPage(),
@@ -91,6 +94,7 @@ class MyApp extends StatelessWidget {
     NavigationRoutes.fontWeight: (context) => const FontWeightDemo(),
     NavigationRoutes.mobileScanner:(context) => const MobileScannerPage(),
     NavigationRoutes.masonryGridView: (context) => MasonryGridViewPage(),
+    NavigationRoutes.computeDemo: (context) => const ComputeDemoPage(),
   };
 
   @override

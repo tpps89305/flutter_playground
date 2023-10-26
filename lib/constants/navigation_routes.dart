@@ -33,4 +33,5 @@ class NavigationRoutes {
   static const String fontWeight = 'fontWeight';
   static const String mobileScanner = 'mobileScanner';
   static const String masonryGridView = 'masonryGridView';
+  static const String computeDemo = 'computeDemo';
 }

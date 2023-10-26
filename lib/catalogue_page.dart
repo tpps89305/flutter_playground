@@ -92,6 +92,23 @@ class _CataloguePageState extends State<CataloguePage> {
                 ),
               ),
             ),
+          ),
+          Card(
+            color: Colors.pinkAccent,
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(CatalogueRoutes.advanceUse);
+              },
+              child: const SizedBox(
+                height: 100,
+                child: Center(
+                  child: Text(
+                    "進階使用",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
+              ),
+            ),
           )
         ],
       ),
