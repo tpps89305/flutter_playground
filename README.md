@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## 相容性
+- Flutter (Channel stable, 3.16.9, on Microsoft Windows [版本 10.0.19045.5608], locale zh-TW)
+- Windows Version (Installed version of Windows is version 10 or higher)
+- Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+- Android Studio (version 2024.2)
+- VS Code (version 1.99.0)
