@@ -33,8 +33,7 @@ class ButtonPage extends StatelessWidget {
       },
       child: const Text("OutlinedButton"),
       style: OutlinedButton.styleFrom(
-        primary: Colors.red,
-        side: const BorderSide(width: 2, color: Colors.red),
+        foregroundColor: Colors.red, side: const BorderSide(width: 2, color: Colors.red),
       ),
     );
   }

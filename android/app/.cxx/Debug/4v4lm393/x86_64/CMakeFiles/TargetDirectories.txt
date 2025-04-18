@@ -1,0 +1,2 @@
+/Users/yangchaofu/FlutterProjects/flutter_playground/android/app/.cxx/Debug/4v4lm393/x86_64/CMakeFiles/edit_cache.dir
+/Users/yangchaofu/FlutterProjects/flutter_playground/android/app/.cxx/Debug/4v4lm393/x86_64/CMakeFiles/rebuild_cache.dir

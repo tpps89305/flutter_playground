@@ -1,0 +1,2 @@
+/Users/yangchaofu/FlutterProjects/flutter_playground/android/app/.cxx/RelWithDebInfo/5i3o2x5b/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/yangchaofu/FlutterProjects/flutter_playground/android/app/.cxx/RelWithDebInfo/5i3o2x5b/armeabi-v7a/CMakeFiles/rebuild_cache.dir

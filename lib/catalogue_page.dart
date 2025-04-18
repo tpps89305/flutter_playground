@@ -34,13 +34,13 @@ class _CataloguePageState extends State<CataloguePage> {
     _appLinks = AppLinks();
 
     // Check initial link if app was in cold state (terminated)
-    final appLink = await _appLinks.getInitialAppLink();
-    if (appLink != null) {
-      log('getInitialAppLink: $appLink');
-      if (appLink.path.contains('book')) {
-        Navigator.of(context).pushNamed(NavigationRoutes.buttonPage);
-      }
-    }
+    // final appLink = await _appLinks.getInitialAppLink();
+    // if (appLink != null) {
+    //   log('getInitialAppLink: $appLink');
+    //   if (appLink.path.contains('book')) {
+    //     Navigator.of(context).pushNamed(NavigationRoutes.buttonPage);
+    //   }
+    // }
 
     // Handle link when app is in warm state (front or background)
     _linkSubscription = _appLinks.uriLinkStream.listen((uri) {
